@@ -35,9 +35,11 @@ void flicker() {
   disableRandom();
   // how many times are we going to flash?
   int flashCount = (int)random(2, 6);
+#ifdef DEBUG
   Serial.print("Flickering LEDs ");
   Serial.print(flashCount);
   Serial.println(" times");
+#endif
   //flash the lights in white flashCount times
   //with a random duration and random delay between each flash
   for (int i = 0; i < flashCount; i++) {
@@ -67,7 +69,7 @@ void fadeColor(CRGB c) {
   delay((int)random(250, 2000));
 }
 
-void setColor(CRGB c){
+void setColor(CRGB c) {
   disableRandom();
   fill_solid(leds, NUM_LEDS, c);
   FastLED.show();

@@ -17,7 +17,7 @@
 
 #include "constants.h"
 
-#define DEBUG
+// #define DEBUG
 #define NUM_LEDS 25
 #define PIN A3
 
