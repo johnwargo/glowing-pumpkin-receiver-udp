@@ -16,6 +16,7 @@
 
 void Task0code(void* pvParameters) {
 
+const BROADCAST_PREFIX ="pumpkin";
   WiFiUDP Udp;
   String request, searchStr;
   int color, colorPos, count;
@@ -47,7 +48,7 @@ void Task0code(void* pvParameters) {
       if (len > 0) {
         packetBuffer[len] = 0;
       }
-  
+
       // // send a reply, to the IP address and port that sent us the packet we received
       // Udp.beginPacket(Udp.remoteIP(), Udp.remotePort());
       // // https://forum.arduino.cc/t/solved-invalid-conversion-from-char-to-uint8_t/563582/2
@@ -58,9 +59,9 @@ void Task0code(void* pvParameters) {
 
       request = packetBuffer;
       Serial.print("Request: ");
-      Serial.println(request);
+      S_erial.println(request);
 
-      searchStr = "pumpkin::color:";
+      searchStr = BROADCAST_PREFIX + "::color:";
       colorPos = searchStr.length();
       if (request.indexOf(searchStr) >= 0) {
         color = request.charAt(colorPos) - '0';
@@ -71,7 +72,7 @@ void Task0code(void* pvParameters) {
         continue;
       }
 
-      searchStr = "pumpkin::flash:";
+      searchStr = BROADCAST_PREFIX + "::flash:";
       colorPos = searchStr.length();
       if (request.indexOf(searchStr) >= 0) {
         color = request.charAt(colorPos) - '0';
@@ -85,17 +86,20 @@ void Task0code(void* pvParameters) {
         continue;
       }
 
-      if (request.indexOf("pumpkin::lightning") >= 0) {
+      searchStr = BROADCAST_PREFIX + "::lightning";
+      if (request.indexOf(searchStr) >= 0) {
         flicker();
         continue;
       }
 
-      if (request.indexOf("pumpkin::off") >= 0) {
+      searchStr = BROADCAST_PREFIX + "::off";
+      if (request.indexOf(searchStr) >= 0) {
         allOff();
         continue;
       }
 
-      if (request.indexOf("pumpkin::random") >= 0) {
+      searchStr = BROADCAST_PREFIX + "::random";
+      if (request.indexOf(searchStr) >= 0) {
         enableRandom();
         continue;
       }

@@ -22,10 +22,11 @@ The API exposed through the web server looks like this:
 
 The sample app I published for the HTTP version ([Glowing Pumpkin Controller](https://github.com/johnwargo/glowing-pumpkin-controller-html/tree/main)) doesn't work with this project; I didn't recode it to support UDP.  To control this device, you must send your own UDP broadcast messages in the right format, or you can use the [Pumpkin Controller (Flutter)](https://github.com/fumblystuff/pumpkin-controller-app-flutter) on a phone or tablet.
 
+Here's a screenshot of the mobile app, you basically tap buttons and it makes corresponding stuff happen on compatible devices nearby. 
 
 ![](images/home.png)
 
-
+The app defaults to prepending `pumpkin::` to every API request so the sketch expects that. 
 
 ![](images/settings-udp.png)
 
