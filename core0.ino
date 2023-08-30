@@ -16,7 +16,8 @@
 
 void Task0code(void* pvParameters) {
 
-const BROADCAST_PREFIX ="pumpkin";
+  const String BROADCAST_PREFIX = "pumpkin";
+
   WiFiUDP Udp;
   String request, searchStr;
   int color, colorPos, count;
