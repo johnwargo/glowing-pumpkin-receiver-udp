@@ -34,9 +34,7 @@ The app defaults to prepending `pumpkin::` to every API request so the sketch ex
 
 Tap the left-facing arrow to return to the app's home page.
 
-## The Code
-
-### Wi-Fi and Wi-Fi Settings
+## Wi-Fi and Wi-Fi Settings
 
 The web server connects to a Wi-Fi network, so the first thing you must do is provide the project sketch with the local network credentials. In the repository, you'll see a file called `constants.h.rename`; rename that file to `constants.h` then open the file in the Arduino IDE. 
 
