@@ -50,13 +50,13 @@ void Task0code(void* pvParameters) {
         packetBuffer[len] = 0;
       }
 
-      // // send a reply, to the IP address and port that sent us the packet we received
-      // Udp.beginPacket(Udp.remoteIP(), Udp.remotePort());
-      // // https://forum.arduino.cc/t/solved-invalid-conversion-from-char-to-uint8_t/563582/2
-      // int i = 0;
-      // while (ReplyBuffer[i] != 0)
-      //   Udp.write((uint8_t)ReplyBuffer[i++]);
-      // Udp.endPacket();
+      // send a reply, to the IP address and port that sent us the packet we received
+      Udp.beginPacket(Udp.remoteIP(), Udp.remotePort());
+      // https://forum.arduino.cc/t/solved-invalid-conversion-from-char-to-uint8_t/563582/2
+      int i = 0;
+      while (ReplyBuffer[i] != 0)
+        Udp.write((uint8_t)ReplyBuffer[i++]);
+      Udp.endPacket();
 
       request = packetBuffer;
       Serial.print("Request: ");
