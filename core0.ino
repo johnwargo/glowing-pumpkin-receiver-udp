@@ -60,7 +60,7 @@ void Task0code(void* pvParameters) {
 
       request = packetBuffer;
       Serial.print("Request: ");
-      S_erial.println(request);
+      Serial.println(request);
 
       searchStr = BROADCAST_PREFIX + "::color:";
       colorPos = searchStr.length();
