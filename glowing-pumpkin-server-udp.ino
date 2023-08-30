@@ -14,14 +14,10 @@
 
 #include <FastLED.h>
 #include <WiFi.h>
-#include <ESPmDNS.h>
 
 #include "constants.h"
 
 #define DEBUG
-// if you change the UDP Broadcast Prefix in the Flutter app
-// you must change the following value to match.
-#define HOSTNAME "pumpkin"
 #define NUM_LEDS 25
 #define PIN A3
 
@@ -82,17 +78,6 @@ void setup() {
   Serial.println("WiFi connected");
   Serial.print("IP address: ");
   Serial.println(WiFi.localIP());
-
-  if (MDNS.begin(HOSTNAME)) {
-    Serial.println("MDNS responder started");
-    MDNS.addService("http", "tcp", 80);
-  } else {
-    Serial.println("Error setting up MDNS responder!");
-    fadeColor(CRGB::Red);
-    while (1) {
-      delay(1000);
-    }
-  }
 
   // Flash LEDs green to let everyone know we successfully
   // connected to Wi-Fi
