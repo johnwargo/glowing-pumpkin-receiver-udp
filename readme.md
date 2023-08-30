@@ -26,7 +26,9 @@ Here's a screenshot of the mobile app, you basically tap buttons and it makes co
 
 ![](images/home.png)
 
-The app defaults to prepending `pumpkin::` to every API request so the sketch expects that. 
+To use the app with the UDP server, in the app tap the gear icon in the upper-right corner of the app and enable the Broadcast (UDP) **Connection Type**. 
+
+The app defaults to prepending `pumpkin::` to every API request so the sketch expects that. If you change the `BROADCAST_PREFIX` constant in the sketch for any reason, you must also change it in the app's configuration in the **UDP Broadcast Prefix** in the app
 
 ![](images/settings-udp.png)
 
