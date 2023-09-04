@@ -7,6 +7,7 @@
 **********************************************************/
 
 void Task1code(void* pvParameters) {
+  
   int randomInt;
 
   Serial.print("LED Management running on core ");
@@ -14,6 +15,7 @@ void Task1code(void* pvParameters) {
 
   // Repeat the following infinitely
   for (;;) {
+    Serial.println("Core 1 loop");
     if (doRandom) {
       randomInt = (int)random(1, numColors + 1);
       fadeColor(colors[randomInt]);
