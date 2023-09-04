@@ -65,7 +65,7 @@ void fadeColor(CRGB c) {
     FastLED.show();
     delay(10);
   }
-  delay((int)random(500, 5000));
+  delay((int)random(500, 4000));
 }
 
 void setColor(CRGB c) {
