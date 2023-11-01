@@ -1,4 +1,4 @@
-# Glowing Pumpkin Server (UDP)
+# Glowing Pumpkin Receiver (UDP)
 
 This is the [Glowing Pumpkin Xiao 5x5 BFF](https://github.com/johnwargo/glowing-pumpkin-xiao-bff) project with a UDP broadcast listener added to you can control the LEDs from a smartphone, tablet, of desktop PC. The original project changed colors randomly and periodically flashed the LEDs white to simulate sparks or lightning. 
 

@@ -16,7 +16,7 @@
 
 void Task0code(void* pvParameters) {
 
-  const String BROADCAST_PREFIX = "pumpkin";
+  const String BROADCAST_PREFIX = "pmpkn::";
 
   WiFiUDP Udp;
   String request, searchStr;
@@ -62,7 +62,7 @@ void Task0code(void* pvParameters) {
       Serial.print("Request: ");
       Serial.println(request);
 
-      searchStr = BROADCAST_PREFIX + "::color:";
+      searchStr = BROADCAST_PREFIX + "color:";
       colorPos = searchStr.length();
       if (request.indexOf(searchStr) >= 0) {
         color = request.charAt(colorPos) - '0';
@@ -73,7 +73,7 @@ void Task0code(void* pvParameters) {
         continue;
       }
 
-      searchStr = BROADCAST_PREFIX + "::flash:";
+      searchStr = BROADCAST_PREFIX + "flash:";
       colorPos = searchStr.length();
       if (request.indexOf(searchStr) >= 0) {
         color = request.charAt(colorPos) - '0';
@@ -87,19 +87,19 @@ void Task0code(void* pvParameters) {
         continue;
       }
 
-      searchStr = BROADCAST_PREFIX + "::lightning";
+      searchStr = BROADCAST_PREFIX + "lightning";
       if (request.indexOf(searchStr) >= 0) {
         flicker();
         continue;
       }
 
-      searchStr = BROADCAST_PREFIX + "::off";
+      searchStr = BROADCAST_PREFIX + "off";
       if (request.indexOf(searchStr) >= 0) {
         allOff();
         continue;
       }
 
-      searchStr = BROADCAST_PREFIX + "::random";
+      searchStr = BROADCAST_PREFIX + "random";
       if (request.indexOf(searchStr) >= 0) {
         enableRandom();
         continue;
