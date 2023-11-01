@@ -1,8 +1,10 @@
 # Glowing Pumpkin Receiver (UDP)
 
-This is the [Glowing Pumpkin Xiao 5x5 BFF](https://github.com/johnwargo/glowing-pumpkin-xiao-bff) project with a UDP broadcast listener added to you can control the LEDs from a smartphone, tablet, of desktop PC. The original project changed colors randomly and periodically flashed the LEDs white to simulate sparks or lightning. 
+This is the [Glowing Pumpkin Xiao 5x5 BFF](https://github.com/johnwargo/glowing-pumpkin-xiao-bff) project with a UDP broadcast listener added to you can control the LEDs from a smartphone or tablet application. The original project changed colors randomly and periodically flashed the LEDs white to simulate sparks or lightning. 
 
-This is slightly modified from [Glowing Pumpkin Server (HTTP)](https://github.com/johnwargo/glowing-pumpkin-server-http); this version uses UDP Broadcast messages to send commands to turn the LEDs on and off, etc, but it commands multiple devices simultaneously. My goal with this version is to setup multiple pumpkins in dormers in my house and have them all doing the same thing at the same time.
+This is slightly modified from [Glowing Pumpkin Server (HTTP)](https://github.com/johnwargo/glowing-pumpkin-server-http); this version uses a mobile app to send UDP Broadcast messages on the network to multiple devices running this software. The app sends commands to the device to turn the LEDs on and off, etc., but controls multiple devices simultaneously because the app sends UDP broadcast messages. 
+
+My goal with this version is to setup multiple pumpkins in the front dormers on my house and have them all doing the same thing at the same time.
 
 The project runs on a [Seeed Studio Xiao ESP32 device](https://www.seeedstudio.com/xiao-series-page) with a [5x5 NeoPixel array](https://www.adafruit.com/product/5646). You can use any other device and LED configuration if you want using this project as a starting point, but the web server is specific to the ESP32 device family, so that limits your microcontroller options. 
 
