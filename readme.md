@@ -10,7 +10,7 @@ The project runs on a [Seeed Studio Xiao ESP32 device](https://www.seeedstudio.c
 
 ## The API
 
-The API exposed through the web server looks like this:
+This sketch implements a listener/receiver, responding to commands from the mobile app. The API exposed through this sketch looks like this:
 
 | Method       | Description |
 | ------------ | ----------- |
