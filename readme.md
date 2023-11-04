@@ -8,6 +8,8 @@ This is slightly modified from [Glowing Pumpkin Server (HTTP)](https://github.co
 
 **Note:** You'll must build and deploy the mobile app ([Pumpkin Controller (Flutter)(https://github.com/fumblystuff/pumpkin-controller-app-flutter)])to use this project. I only tested this app on an Android device, I do not know if the code functions on iOS. If I get time over the holidays, I'll try to publish this to the Google App store and test it on iOS.
 
+Here's a video of the [project in action](https://youtu.be/beevHJM8poQ).
+
 ## Parts
 
 For this project, I used:
