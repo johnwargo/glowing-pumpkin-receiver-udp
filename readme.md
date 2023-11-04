@@ -79,24 +79,6 @@ The app defaults to prepending `pumpkin::` to every API request so the sketch ex
 
 Tap the left-facing arrow to return to the app's home page.
 
-## Wi-Fi and Wi-Fi Settings
-
-The web server connects to a Wi-Fi network, so the first thing you must do is provide the project sketch with the local network credentials. In the repository, you'll see a file called `constants.h.rename`; rename that file to `constants.h` then open the file in the Arduino IDE. 
-
-The file currently looks like this:
-
-```c
-#define WIFI_SSID ""
-#define WIFI_PASSWORD ""
-```
-
-Edit the file and add the local Wi-Fi network [SSID](https://en.wikipedia.org/wiki/Service_set_(802.11_network)#SSID) (network name) between the quotes in the `WIFI_SSID` define. Add the network access password between the quotes in the `WIFI_PASSWORD` define.  The file should look something like this but with your network name and password:
-
-```c
-#define WIFI_SSID "my_network_name"
-#define WIFI_PASSWORD "my_password"
-```
-
 ***
 
 You can find information on many different topics on my [personal blog](http://www.johnwargo.com). Learn about all of my publications at [John Wargo Books](http://www.johnwargobooks.com).
