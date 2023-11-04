@@ -6,9 +6,7 @@ This is slightly modified from [Glowing Pumpkin Server (HTTP)](https://github.co
 
 ![Connection diagram](images/udp-broadcast-connection.png)
 
-My goal with this version is to setup multiple pumpkins in the front dormers on my house and have them all doing the same thing at the same time.
-
-The project runs on a [Seeed Studio Xiao ESP32 device](https://www.seeedstudio.com/xiao-series-page) with a [5x5 NeoPixel array](https://www.adafruit.com/product/5646). You can use any other device and LED configuration if you want using this project as a starting point, but the web server is specific to the ESP32 device family, so that limits your microcontroller options. 
+**Note:** You'll must build and deploy the mobile app ([Pumpkin Controller (Flutter)(https://github.com/fumblystuff/pumpkin-controller-app-flutter)])to use this project. I only tested this app on an Android device, I do not know if the code functions on iOS. If I get time over the holidays, I'll try to publish this to the Google App store and test it on iOS.
 
 ## Parts
 
@@ -50,6 +48,8 @@ Enter your local Wi-Fi network name (SSID) between the quotes in the `WIDI_SSID`
 ## The Code
 
 Normally I'd spend a lot of time here documenting everything I can tell you about the code. I'm not going to do that here because it's a lot of code to go through. I put a lot of comments in the code to help you understand what I did and why. If you have questions, ask them in an [issue](https://github.com/johnwargo/glowing-pumpkin-receiver-udp/issues) in this repository and I'll answer when I can.
+
+I spent a fair amount of effort organizing the code into multiple files to make it easy to tell what's going on in the sketch. I also split the code onto separate processor cores. I did this partically to show off that I knew how to do that but also so I could dedicate the UDP listener to a dedicated processor core. While the sketch is messing around with the LEDs and such, the UDP listener gets all the processor cycles it needs to process incoming requests.
 
 ## The API
 
