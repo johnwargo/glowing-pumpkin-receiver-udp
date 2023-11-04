@@ -4,7 +4,7 @@ This is the [Glowing Pumpkin Xiao 5x5 BFF](https://github.com/johnwargo/glowing-
 
 This is slightly modified from [Glowing Pumpkin Server (HTTP)](https://github.com/johnwargo/glowing-pumpkin-server-http); this version uses a mobile app to send UDP Broadcast messages on the network to multiple devices running this software. The app sends commands to the device to turn the LEDs on and off, etc., but controls multiple devices simultaneously because the app sends UDP broadcast messages. 
 
-![Connection diagram](images\udp-broadcast-connection.png)
+![Connection diagram](images/udp-broadcast-connection.png)
 
 My goal with this version is to setup multiple pumpkins in the front dormers on my house and have them all doing the same thing at the same time.
 
@@ -46,6 +46,10 @@ Enter your local Wi-Fi network name (SSID) between the quotes in the `WIDI_SSID`
 ```
 
 **Note:** Wi-Fi SSID and passwords are case sensitive, so if your device doesn't connect correctly to the network, double check the credentials.
+
+## The Code
+
+Normally I'd spend a lot of time here documenting everything I can tell you about the code. I'm not going to do that here because it's a lot of code to go through. I put a lot of comments in the code to help you understand what I did and why. If you have questions, ask them in an issue in this repository.
 
 ## The API
 
